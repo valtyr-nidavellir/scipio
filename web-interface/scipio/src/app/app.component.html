@@ -1,0 +1,88 @@
+<pre id='title'></pre>
+
+<body>
+  <div style='width:100%;margin-bottom:10px;font-size:20pt;'>~Quick Deploy Commands~</div>
+
+  <div class='button-menu'>
+    <div class='triangle'></div>
+    <div class='inner-text'>Execute Scipio</div>
+    <div class='inner-command'>python scipio.py -a 0.0001 -t 0.3 -l best_weights.txt -c 20 </div>
+  </div>
+
+  <div class='button-menu'>
+    <div class='triangle'></div>
+    <div class='inner-text'>Train Scipio</div>
+    <div class='inner-command'>python scipio.py -a 0.00001 -e 3
+    </div>
+    <!-- have popup before execution warning about needing a powerful computer -->
+  </div>
+
+  <div class='button-menu'>
+    <div class='triangle'></div>
+    <div class='inner-text'>Custom Scipio Command</div>
+    <div class='inner-command'>opens command configuration dialog</div>
+  </div>
+
+  <div class="chart-grid">
+    <!-- <div id='chart-grid-title'>STATISTIC INTERFACE</div> -->
+    <div id='stats'>
+      <div class='stats-row'>status
+        <!-- <div class='stats-row-label'>Status:</div> -->
+      </div>
+
+      <div class='stats-row'>current streak
+
+      </div>
+
+      <div class='stats-row'>total questions
+
+      </div>
+
+      <div class='stats-row'>total answers
+
+      </div>
+
+      <div class='stats-row'>
+        
+      </div>
+    </div>
+
+    <div id='chart-container'>
+      <div class='chart border-bottom border-left'>
+        <canvas style="width:100%;height:100%;" id='chart-arch'></canvas>
+      </div>
+
+      <div class='chart border-bottom'>
+        <canvas style="width:100%;height:100%;" id='chart-acc'></canvas>
+      </div>
+
+      <div class='chart border-left'>
+        <canvas style="width:100%;height:100%;" id='chart-dough'></canvas>
+      </div>
+
+      <div class='chart'>
+        <canvas style="width:100%;height:100%;" id='chart-conf'></canvas>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+<div class='footer'>
+  <div id='stop-button'>Stop Execution</div>
+</div>
+
+<!-- 
+<pre id='footer'>
+
+  ██████  ██████   █████  ███████ ████████  ██████  ██████  ██  █████  ███    ██     ███    ███  █████   ██████ ██   ██ ██ ███    ██ ███████     ██      ███████  █████  ██████  ███    ██ ██ ███    ██  ██████       ██████ ██   ██  █████  ██      ██      ███████ ███    ██  ██████  ███████
+  ██   ██ ██   ██ ██   ██ ██         ██    ██    ██ ██   ██ ██ ██   ██ ████   ██     ████  ████ ██   ██ ██      ██   ██ ██ ████   ██ ██          ██      ██      ██   ██ ██   ██ ████   ██ ██ ████   ██ ██           ██      ██   ██ ██   ██ ██      ██      ██      ████   ██ ██       ██     
+  ██████  ██████  ███████ █████      ██    ██    ██ ██████  ██ ███████ ██ ██  ██     ██ ████ ██ ███████ ██      ███████ ██ ██ ██  ██ █████       ██      █████   ███████ ██████  ██ ██  ██ ██ ██ ██  ██ ██   ███     ██      ███████ ███████ ██      ██      █████   ██ ██  ██ ██   ███ █████  
+  ██      ██   ██ ██   ██ ██         ██    ██    ██ ██   ██ ██ ██   ██ ██  ██ ██     ██  ██  ██ ██   ██ ██      ██   ██ ██ ██  ██ ██ ██          ██      ██      ██   ██ ██   ██ ██  ██ ██ ██ ██  ██ ██ ██    ██     ██      ██   ██ ██   ██ ██      ██      ██      ██  ██ ██ ██    ██ ██     
+  ██      ██   ██ ██   ██ ███████    ██     ██████  ██   ██ ██ ██   ██ ██   ████     ██      ██ ██   ██  ██████ ██   ██ ██ ██   ████ ███████     ███████ ███████ ██   ██ ██   ██ ██   ████ ██ ██   ████  ██████       ██████ ██   ██ ██   ██ ███████ ███████ ███████ ██   ████  ██████  ███████
+</pre> -->
+
+
+

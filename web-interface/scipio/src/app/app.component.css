@@ -1,0 +1,197 @@
+@keyframes animate-button{
+    to{
+        background-color: white;
+        color:black;
+        transform: scale(1.05);
+    }
+}
+
+form{
+    color: white;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin:auto;
+    margin-top: 100px;
+    width: 80%;
+    height: 1000px;
+    /* background-color: brown; */
+}
+
+#title{
+    height:150px;
+    margin-top:0;
+    color: #00eaff;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1pt;
+    border-bottom-color: #bf00ff;
+}
+
+#footer{
+    width:100%;
+    margin-top:20%;
+    color:#bf00ff;
+    border-top-style:solid;
+    border-color:#bf00ff;
+    border-width: 1pt;
+    text-align: center;
+}
+
+.button-menu{
+    width:100%;
+    height:100px;
+    margin-bottom: 20px;
+    background-color: #0f0f0f;
+    border-color: #00eaff;
+    border-width: 1pt;
+
+}
+
+.button-menu:hover{
+    animation-name: animate-button;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 100px solid #bf00ff;
+    border-right: 100px solid transparent;
+    margin:none;
+    float:left;
+  }
+
+.inner-text{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    justify-content: center;
+    font-size: 35pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inner-command{
+    width:100%;
+    height:40%;
+    text-align: center;
+    font-size: 25pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chart-grid{
+    width:100%;
+    height:100%;
+    /* border-color: #bf00ff;
+    border-width:1pt;
+    border-style: solid; */
+    margin-bottom: 100px;
+    /* background-color: white; */
+}
+
+#chart-grid-title{
+    width:100%;
+    height: 7%;
+    font-size: 45pt;
+    text-align: center;
+    color: #00eaff;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: blue; */
+}
+
+#stats{
+    width:35%;
+    /* height:93%; */
+    height:100%;
+    float:left;
+    /* background-color: white; */
+}
+
+.stats-row{
+    width: 100%;
+    height: 18%;
+    margin-bottom: 3.3%;
+    background-color: #0f0f0f;
+    border-color: #bf00ff;
+    border-width: 1pt;
+    border-right-style: solid;
+    border-left-style: solid;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats-row-label{
+    width:50%;
+    height: 50%;
+    top:25%;
+    text-align: center;
+    font-size: 50pt;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: red; */
+}
+
+#chart-container{
+    width:60%;
+    /* height:93%; */
+    height:100%;
+    float: right;
+    /* background-color: rebeccapurple; */
+}
+
+.chart{
+    width:49.7%;
+    height:49.7%;
+    float:right;
+
+    /* background-color: red; */
+}
+
+.border-left{
+    border-color: #bf00ff;
+    border-width: 1pt;
+    border-left-style: solid;
+}
+
+.border-bottom{
+    border-color: #bf00ff;
+    border-width: 1pt;
+    border-bottom-style: solid;
+}
+
+.footer{
+    left:0;
+    margin:0;
+    bottom:0;
+    width:100%;
+    height:50px;
+    position: fixed;
+    text-align: center;
+    /* background-color: red; */
+}
+
+#stop-button{
+    width:25%;
+    height:100%;
+    margin:auto;
+    font-size: 35pt;
+    border-width: 1pt;
+    border-color: #bf00ff;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    background-color: #0f0f0f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#stop-button:hover{
+    animation-name: animate-button;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+}
