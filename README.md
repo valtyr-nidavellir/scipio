@@ -1,6 +1,4 @@
 # Scipio AI
-<br><br>
-
 To view command-line documentation view README_SCIPIO.txt and README_AENEAS.txt<br><br>
 Web interface currently under development.<br>
 To view the web interface:<br>
