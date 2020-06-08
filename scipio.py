@@ -193,6 +193,7 @@ def train():
 def execute():
     counter=0
     streak=0
+    top_streak=0
     time_start=time.time()
     while True:
         (targets, blob)=request()
@@ -213,12 +214,13 @@ def execute():
         try:
             guess=max(count,key=count.get)
 
-            #if confidence low ie low fire rate .. raise and pull .. mess around with to create highest acc
-            if int(count.get(guess)) <= confidence:
+            #if confidence low ie low fire rate .. raise and pull 
+            net_conf=int(count.get(guess))
+            if net_conf <= confidence:
                 print('low answer confidence...low fire['+str(int(count.get(guess)))+"]")
                 raise('')
 
-            print("Guess:\t"+guess)
+            print("Guess:\t"+guess+'\tConfidence: '+str(net_conf))
 
             response=solve(guess)
 
@@ -231,8 +233,8 @@ def execute():
                 print("HASH COLLECTED!")
                 time_stop=time.time()
                 time_total=time_stop-time_start
-                save_hash("Correct: "+str(correct_resp)+"\tAccuracy: "+str(accuracy)+"\tTotal Time: "+str(time_total)+"\nHash: "+hash_resp+"\n")
-                ask_hash(email)
+                save_hash("Streak: "+str(fm.read_file('data/top_streak.txt'))+"Correct: "+str(correct_resp)+"\tAccuracy: "+str(accuracy)+"\tTotal Time: "+str(time_total)+"\nHash: "+hash_resp+"\n")
+                # ask_hash(email)
             except:
                 hash_resp="None"
 
@@ -240,8 +242,12 @@ def execute():
 
             if(target==guess):
                 streak=streak+1
+                # if streak > top_streak:
+                #     top_streak=streak
                 print("streak: "+str(streak)+'\n')
             else:
+                if int(fm.read_file('data/top_streak.txt')) < streak:
+                    fm.write_file('data/top_streak.txt',top_streak,'w+')
                 print('streak reset...\n')
                 streak=0
 
@@ -259,8 +265,7 @@ def execute():
                 save_weights()
 
         except:
-            #do nothing
-            hello="world"
+            pass
     return
 
 ##CLI##
@@ -341,7 +346,6 @@ if(args.confidence!=None):
 else:
     print('conf:\t'+str(confidence)+"\t[default]")
 
-# if(input("continue? y/n: ")=='y'):
 perceptron.init_percepts(perceptrons,alpha,label,threshold)
 
 if(args.load!=None):
@@ -351,7 +355,4 @@ if(training==True):
     train()
 else:
     execute()
-
-# else:
-#     print('exiting scipio...')
     
